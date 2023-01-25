@@ -61,11 +61,7 @@
         margin: 0 10px; /*ВНЕШНИЙ ОТСТУП*/ 
     }
     
-    #window {
-    border-radius: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    
     
     #taskbar { 
         background: #75bdb7;

@@ -28,37 +28,17 @@
     "modules-right": [
 "pulseaudio",
 "backlight",
-"hyprland/window",
 "hyprland/language"
     ],
 
 //НАСТРОЙКА МОДУЛЯ ВОРКСПЕЙСОВ:
-      "sway/workspaces": {
-	//ПРОКРУТКА КОЛЕСОМ МЫШИ:
-          "disable-scroll": false,
-	//КАКАЯ ТО ХРЕНЬ ДЛЯ НЕСКОЛЬКИХ ПАНЕЛЕЙ:
-          "all-outputs": true,
-	//ЧТО БУДЕТ ОТОБРАЖАТЬСЯ В НАЗАВАНИИ, ИКОНКА КАК НИЖЕ ИЛИ ИМЯ {name}:
-          "format": "{icon}", 
-	//СОБСТВЕННО НАСТРОЙКИ ИКОНОК ДЛЯ ВОРКСПЕЙСОВ:
-          "format-icons": {
-              "1": "",
-              "2": "",
-              "3": "",
-              "4": "",
-              "5": "",
-             "urgent": "",
-              "focused": "",
-               "default": ""
-          }
-      },
-
-
-//НАСТРОЙКА ПОВЕДЕНИЯ КНОПОК ПЕРЕКЛЮЧЕНИЯ ВОРКСПЕЙСОМ, ТРОГАТЬ ТОЛЬКО ЕСЛИ ДОФИГА УМНЫЙ:
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-
+    
+	"wlr/workspaces": {
+	"format": "{name}",
+	"on-click": "activate",
+	"all-outputs": true
+	},
+	
 //ОТОБРАЖЕНИЕ МОДУЛЯ MPD, ФОРМАТЫ И ИКОНКИ, ДУМАЮ САМ ДОГАДАЕШЬСЯ ЧТО ЕСТЬ ЧТО, Я ВОТ НЕ ОСИЛИЛ И ПОЛЬЗУЮСЬ CMUS:
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
@@ -154,7 +134,7 @@
 },
 
 "hyprland/window": {
-    "format": "1 2 3 4 5 6 {}",
+    "format": "1 {workspace, 1}",
     "separate-outputs": false
 },
 
