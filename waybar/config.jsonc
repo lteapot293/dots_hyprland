@@ -6,9 +6,6 @@
     "modules-center": ["hyprland/window"],
     "modules-right": [
         "tray",
-        "custom/caffeine",
-        "custom/updates",
-        "custom/language",
         "network",
         "backlight",
         "pulseaudio",
