@@ -99,6 +99,7 @@
             "portable": "",
             "car": "",
             "default": ["", "", "墳", ""]
-        }
-    }
+       },
+        "on-click": "pavucontrol"
+    },
 }
