@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "height": 0,
-    "modules-left": ["clock", "wlr/workspaces"],
+    "modules-left": ["hyprland/language", "clock", "wlr/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": [
         "tray",
@@ -10,6 +10,7 @@
         "backlight",
         "pulseaudio",
         "battery"
+        
     ],
 
     "hyprland/window": {
@@ -40,6 +41,13 @@
         "format-icons": ["﯈", ""],
         "format": "{icon}"
     },
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "us",
+        "format-ru": "ru",
+     },
+        
     "custom/updates": {
         "exec": "(checkupdates ; paru -Qua) | wc -l",
         "interval": 7200,
@@ -75,7 +83,7 @@
         "format-icons": ["", "", "", "", "", "", "", "", "", "", ""]
     },
     "clock": {
-        "format": "{: %R   %d/%m}",
+        "format": "{: %R   %d/%m}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "network": {
@@ -98,7 +106,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", "墳", ""]
+            "default": ["墳", "墳", "墳", "墳",]
        },
         "on-click": "pavucontrol"
     },
