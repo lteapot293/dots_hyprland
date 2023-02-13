@@ -6,9 +6,9 @@ window {
     border: 2px solid;
     border-color: #313244;
     background-color: #1e1e2e;
-    border-radius: 10px;
-    font-family: "Ubuntu NF";
-    font-size: 14px;
+    border-radius: 20px;
+    font-family: "Fira code";
+    font-size: 16px;
 }
 
 #input {
@@ -41,10 +41,10 @@ window {
 }
 
 #text:selected {
-    color: @foreground;
-    margin: 0px 0px;
+    margin: 0px 10px;
     border: none;
     border-radius: 8px;
+	font-size: 20px;
 }
 
 #entry {
@@ -59,8 +59,7 @@ window {
 #entry:selected {
     margin: 0px 0px;
     border: none;
-    border-radius: 8px;
-    font-weight: bold;
+    border-radius: 10px;
     background-color: #585b70;
 }
 

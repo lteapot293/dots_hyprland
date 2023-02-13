@@ -1,68 +1,60 @@
-{
-    "layer": "top",
-    "position": "top",
-    "height": 0,
-    "modules-left": ["hyprland/language", "clock", "wlr/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": [
-        "tray",
-        "network",
-        "backlight",
-        "pulseaudio",
-        "battery"
-        
-    ],
 
-    "hyprland/window": {
-        "format": "{}"
-    },
+{
+	"layer": "top",
+	"position": "top",
+	"hight": 10,
+	"width": 500,
+    
+	"modules-left": ["wlr/workspaces"],
+	"modules-center": ["clock"],
+	"modules-right": ["battery", "backlight", "pulseaudio", "tray"],
+
+
+     "clock": {
+        "format": "{: %R  %d/%m}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+},
+
+
     "wlr/workspaces": {
-        "disable-scroll": true,
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
         "all-outputs": true,
         "on-click": "activate",
-        //"format": "{icon}",
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
-        }
-    },
-    "custom/caffeine": {
-        "exec": "~/.config/waybar/scripts/caffeine.sh",
-        "return-type": "json",
-        "interval": 3,
-        "format-icons": ["﯈", ""],
-        "format": "{icon}"
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰎥",
+            "2": "󰎨",
+            "3": "󰎫",
+            "4": "󰎲",
+            "5": "󰎯",
+            "urgent": "  ",
+            "default": "  "
+          }
     },
 
+     
+      "hyprland/window": {
+        "format": "{}"
+    },
+    
     "hyprland/language": {
-        "format": "{}",
-        "format-en": "us",
-        "format-ru": "ru",
-     },
+        "format": " {}",
+        "format-en": "US",
+        "format-ru": "RU",
+        },
         
-    "custom/updates": {
-        "exec": "(checkupdates ; paru -Qua) | wc -l",
-        "interval": 7200,
-        "format": " {}"
+	"bluetooth": {
+        "format-disabled": "OFF ",
+        "format-off": "ВЫКЛ ",
+        "format-on": "ВКЛ ",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias}  {device_battery_percentage}%",
+        "on-click": "blueman-manager",
+        "tooltip": false
     },
-    "custom/language": {
-        "exec": "cat /tmp/kb_layout",
-        "interval": 3,
-        "format": " {}"
-    },
-    "tray": {
-        "icon-size": 13,
-        "spacing": 10
-    },
-    "backlight": {
+	
+	"backlight": {
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
         "format-icons": ["", "", ""],
@@ -70,44 +62,61 @@
         "on-scroll-down": "brightnessctl set 1%-",
         "min-length": 6
     },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", "", "", ""]
-    },
-    "clock": {
-        "format": "{: %R   %d/%m}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-    },
-    "network": {
-        "format-wifi": "直 {essid}",
-        "format-ethernet": " {essid}",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "睊 Disconnected",
+	
+	"pulseaudio": {
+		"format": "{icon} {volume:2}%",
+		"format-bluetooth": "{icon}  {volume}%",
+		"format-muted": "MUTE",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"scroll-step": 5,
+		"on-click": "pamixer -t",
+		"on-click-right": "pavucontrol"
+	},
+	
+	"network": {
+        "format-wifi": " 直 ",
+        "format-ethernet": " ",
+        "format-linked": "(No IP) ",
+        "format-disconnected": " 睊 ",
         "tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
         "on-click": "wofi-wifi-menu"
     },
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": "ﱝ Muted",
-        "on-click": "/home/amitgold/.config/hypr/scripts/volume_ctl.sh mute",
-        "scroll-step": 1,
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["墳", "墳", "墳", "墳",]
-       },
-        "on-click": "pavucontrol"
-    },
+	
+	"memory": {
+		"interval": 5,
+		"format": "Mem {}%"
+	},
+	"cpu": {
+		"interval": 5,
+		"format": "󰻠 {usage:2}%"
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"disk": {
+		"interval": 5,
+		"format": "Disk {percentage_used:2}%",
+		"path": "/"
+	},
+	"tray": {
+		"icon-size": 20
+	}
 }

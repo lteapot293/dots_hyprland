@@ -1,5 +1,5 @@
 * {
-	font-size: 20px;
+	font-size: 19px;
 	font-family: Firacode Nerd Font;
 	border-radius: 0;
 
@@ -8,126 +8,66 @@
 window#waybar {
     background-color: transparent;
     color: #8dd7fe;
-    transition-property: background-color;
-	transition-duration: .5s;
-	
+	border-radius: 15;
+	border: solid 2px #a6adc8;
 	}
 
 #workspaces {
-    border: 2px solid #4D4D4D;
-    background: #1e1e2e;
-    border-radius: 10px;
-    margin-left: 10px;
-    padding-right: 0px;
-    padding-left: 5px;
+    border-radius: 15px;
+    border-right: solid 2px #a6adc8;
+    background-color: transparent;
+    margin-right: 15px;
+	padding: 2px;
 }
 
 #workspaces button {
-  box-shadow: inset 0 -3px #2E92C5;
-    padding: 5px;
-    color: #313244;
-    margin-right: 5px;
+    
+    color: #929292;
+    
+
 }
 
 #workspaces button.active {
-    color: #a6adc8;
-	border-radius: 5px;
+    color: #cdd6f4;
+
 }
 
 #workspaces button.focused {
     color: #a6adc8;
-    background: #eba0ac;
-    border-radius: 10px;
 }
 
 #workspaces button.urgent {
     color: #11111b;
     background: #a6e3a1;
-    border-radius: 10px;
 }
 
 #workspaces button:hover {
     background: #11111b;
-    color: #cdd6f4;
-    border-radius: 10px;
-}
-
-tooltip {
-    background: #1e1e2e;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #11111b;
+    color: #a6adc8;
 }
 
 
-#network,
-#cpu {
-box-shadow: inset 0 -3px #cba6f7;
-background: #1a1a1a;
-border-radius: 5;
-}
-
-#pulseaudio,
-#backlight,
-#battery {
-	background: #1a1a1a;
-	box-shadow: inset 0 -3px #4BD7BA;
-	border-radius: 5;
-}
-
-#tray {
-background: #1a1a1a;
-box-shadow: inset 0 -3px #4BD7BA;
-border-radius: 5;
-margin-right: 15px;
-}
-
-
-#pulseaudio {
-	color: #268bd2;
-}
-
-#clock{
-background: #1e1e2e;
-border-radius: 10;
-color: #b58900;
-box-shadow: inset 0 -3px #8dd7fe;
-}
 
 #network {
-	color: #4BD7BA;
-}
-
-#cpu {
-	color: #6c71c4;
-}
-#battery {
-	color: #859900;
-}
-
-#bluetooth{
-    color: #cba6f7;
-}
-
-#backlight {
-color: #FBAD13;
-}
-
-#language {
-background: #1e1e2e;
-box-shadow: inset 0 -3px #cba6f7;
+background-color: transparent;
 border-radius: 5;
 }
 
-#clock,
-#pulseaudio,
-#language,
-#cpu,
-#window,
-#tray,
-#backlight,
-#network,
-#battery {
-	padding: 0 10px;
+#clock {
+margin-right: 20px;
+color: #a6adc8;
 }
+
+#language,
+#tray,
+#pulseaudio,
+#backlight,
+#battery {
+	border-left: solid 2px #a6adc8;
+	background-color: transparent;
+	padding: 5px;
+	border-radius: 0;
+	color: #a6adc8;
+}
+
+
