@@ -69,5 +69,7 @@ color: #a6adc8;
 	border-radius: 0;
 	color: #a6adc8;
 }
-
-
+#tray {
+border-left: solid 2px #a6adc8;
+border-radius: 15;
+}
