@@ -1,0 +1,109 @@
+* {
+    font-size: 16px;
+	font-family: Firacode Nerd Font;
+    font-weight: bold;
+	border-radius: 0px;
+
+}
+
+window#waybar {
+
+	background-color: transparent;
+	border-radius: 10px;
+	}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+tooltip {
+    background: #1e1e2e;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #11111b;
+}
+
+#workspaces {
+	margin-right: 20px;
+	border: solid 2px #a6adc8;
+	border-radius: 10px;
+}
+
+#workspaces button {
+    border-radius: 15px;
+    color: #929292;
+    
+}
+
+#workspaces button.active {
+    color: #cdd6f4;
+	border-radius: 15px;
+}
+
+#workspaces button.focused {
+    color: #a6adc8;
+	border-radius: 15px;
+}
+
+#workspaces button:hover {
+    background: #11111b;
+    border-radius: 15px;
+    color: #7979AF;
+}
+
+
+#window {
+font-size: 10px;
+color: #cdd6f4;
+padding: 10px;
+border-right: solid 2px #a6adc8;
+}
+
+#clock {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	color: #f9e2af;
+
+}
+
+#custom-git {
+	color: #8dd7fe;
+
+}
+
+#pulseaudio {
+	color: #8dd7fe;
+
+}
+
+#backlight {
+	color: #fab387;
+
+}
+
+#battery {
+	color: #a6e3a1;
+
+}
+
+#custom-poff {
+border-left: solid 2px #a6adc8;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+}
+
+#custom-poff,
+#clock,
+#tray,
+#window,
+#pulseaudio,
+#custom-git,
+#workspaces,
+#backlight,
+#battery { 
+	 border: solid 2px #a6adc8;
+	background-color: #434C5E;
+	padding: 0 5px;
+}
