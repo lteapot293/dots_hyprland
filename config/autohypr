@@ -38,6 +38,6 @@ export _JAVA_AWT_WM_NONREPARENTING="1"
 
 #XCURSOR_THEME=Catppuccin-Mocha-Dark-Cursors
 export XCURSOR_SIZE=16
-export GTK_THEME=Nordic
+export GTK_THEME=Dracula
 
 exec Hyprland
