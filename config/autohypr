@@ -12,7 +12,7 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 # User binaries folder
 export PATH="${HOME}/.local/bin:${PATH}"
 
-export QT_QPA_PLATFORM="wayland;xcb"
+#export QT_QPA_PLATFORM="wayland;xcb"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
 export SDL_VIDEODRIVER=wayland
